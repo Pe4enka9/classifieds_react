@@ -1,0 +1,67 @@
+.classifieds-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 2rem;
+
+  .classified {
+    padding: 3rem;
+
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    border: .2rem solid $border;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+    
+    .img-container {
+      width: 100%;
+      height: 25rem;
+
+      -webkit-border-radius: $smallRadius;
+      -moz-border-radius: $smallRadius;
+      border-radius: $smallRadius;
+
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+    }
+    
+    h3, p {
+      color: $primaryText;
+    }
+
+    .description {
+      color: $secondaryText;
+    }
+
+    .price {
+      width: fit-content;
+
+      padding: .5em;
+
+      background-color: $secondary;
+
+      -webkit-border-radius: $smallRadius;
+      -moz-border-radius: $smallRadius;
+      border-radius: $smallRadius;
+
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
+}

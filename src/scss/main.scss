@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "variables";
+@import "header";
+@import "form";
+@import "button";
+@import "sort";
+@import "classifieds";
+@import "show";
+@import "loader";
+@import "footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font: 10px "Roboto", sans-serif;
+}
+
+body {
+  background-color: $background;
+}
+
+header, footer {
+  padding: 2.5rem;
+
+  background-color: $main;
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    a {
+      color: #fff;
+
+      font-size: 1.2rem;
+      font-weight: 400;
+
+      text-decoration: none;
+      cursor: pointer;
+      transition: color .2s;
+
+      &:hover {
+        color: #d5d5d5;
+      }
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.container {
+  width: 80%;
+  min-height: 100vh;
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.error {
+  color: $error;
+}
+
+.success {
+  color: $success;
+}

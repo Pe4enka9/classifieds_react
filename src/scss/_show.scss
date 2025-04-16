@@ -1,0 +1,50 @@
+.show {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  h3, p {
+    color: $primaryText;
+  }
+
+  .img-container {
+    width: 30vw;
+
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .description {
+    color: $secondaryText;
+  }
+
+  .price {
+    width: fit-content;
+
+    padding: .5em;
+
+    background-color: $secondary;
+
+    -webkit-border-radius: $smallRadius;
+    -moz-border-radius: $smallRadius;
+    border-radius: $smallRadius;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .contact {
+    cursor: pointer;
+
+    &.active {
+      cursor: auto;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.btn {
+  width: fit-content;
+
+  padding: .5em .7em;
+
+  display: block;
+
+  color: #fff;
+  background-color: $main;
+
+  border: none;
+  -webkit-border-radius: $smallRadius;
+  -moz-border-radius: $smallRadius;
+  border-radius: $smallRadius;
+
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: $mainHover;
+  }
+
+  &.disabled, &:disabled {
+    background-color: $border;
+
+    cursor: not-allowed;
+  }
+
+  &.danger {
+    background-color: $error;
+
+    &:hover {
+      background-color: $errorHover;
+    }
+  }
+}

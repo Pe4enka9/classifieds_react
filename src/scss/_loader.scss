@@ -1,0 +1,39 @@
+.loader-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    display: flex;
+  }
+
+  .loader {
+    width: 5rem;
+    height: 5rem;
+
+    border: .3rem solid $border;
+    border-top: .3rem solid $main;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-animation: rotate infinite 2s linear;
+    -o-animation: rotate infinite 2s linear;
+    animation: rotate infinite 2s linear;
+
+    &.deleting {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

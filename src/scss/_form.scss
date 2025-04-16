@@ -1,0 +1,78 @@
+form {
+  width: fit-content;
+
+  margin: auto;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  background-color: #fff;
+
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+
+  box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .4);
+
+  .input-container {
+    width: 100%;
+    max-width: 30rem;
+    min-width: 25rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    label {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    input, select, textarea {
+      padding: .5em .7em;
+
+      outline: none;
+      border: .2rem solid $border;
+      -webkit-border-radius: $radius;
+      -moz-border-radius: $radius;
+      border-radius: $radius;
+
+      font-size: 1.2rem;
+      font-weight: 400;
+
+      transition: border-color .5s ease;
+
+      &:focus {
+        border-color: $main;
+      }
+    }
+
+    textarea {
+      min-height: 3rem;
+      max-height: 10rem;
+
+      resize: vertical;
+    }
+
+    option {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  }
+
+  p > a {
+    color: $main;
+
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
