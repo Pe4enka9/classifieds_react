@@ -10,11 +10,16 @@ export default function UserMain({API_URL, token}) {
 
     const [classifieds, setClassifieds] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [price, setPrice] = useState('');
+
+    const handleChange = (e) => {
+        setPrice(e.target.value);
+    };
 
     const fetchClassifieds = () => {
         setLoading(true);
 
-        fetch(`${API_URL}/user/classifieds`, {
+        fetch(`${API_URL}/user/classifieds?price=${price}`, {
             headers: {'Authorization': `Bearer ${token}`},
         })
             .then(res => res.json())
@@ -25,13 +30,26 @@ export default function UserMain({API_URL, token}) {
 
     useEffect(() => {
         fetchClassifieds();
-    }, []);
+    }, [price]);
 
     return (
         <>
             <h1 className="mb-2">Ваши объявления</h1>
 
             <Link to="/classifieds/create" className="btn mb-2">Создать</Link>
+
+            <form className="sort mb-5">
+                <h2>Сортировка</h2>
+
+                <div className="input-container">
+                    <label htmlFor="price">Цена</label>
+                    <select name="price" id="price" value={price} onChange={handleChange}>
+                        <option value="">Все</option>
+                        <option value="desc">Сначала дорогие</option>
+                        <option value="asc">Сначала дешевые</option>
+                    </select>
+                </div>
+            </form>
 
             <section className="classifieds-container">
                 {loading ? (
