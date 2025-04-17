@@ -39,13 +39,17 @@ export default function Auth({API_URL, token, setToken}) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(formData),
         })
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 401) {
+                    setFailAuth(true);
+                    setFormData({...formData, password: ''});
+                } else {
+                    return res.json();
+                }
+            })
             .then(data => {
                 if (data.errors) {
                     setErrors(data.errors);
-                } else if (data.message) {
-                    setFailAuth(true);
-                    setFormData({...formData, password: ''});
                 } else {
                     setFormData({email: '', password: ''});
                     setToken(data.token);
