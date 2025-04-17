@@ -279,9 +279,14 @@ header, footer {
 header nav, footer nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+header nav div, footer nav div {
+  display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
-header nav a, footer nav a {
+header nav div a, footer nav div a {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 400;
@@ -289,10 +294,10 @@ header nav a, footer nav a {
   cursor: pointer;
   transition: color 0.2s;
 }
-header nav a:hover, footer nav a:hover {
+header nav div a:hover, footer nav div a:hover {
   color: #d5d5d5;
 }
-header nav a.active, footer nav a.active {
+header nav div a.active, footer nav div a.active {
   text-decoration: underline;
 }
 

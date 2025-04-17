@@ -32,24 +32,30 @@ header, footer {
   nav {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: space-between;
 
-    a {
-      color: #fff;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
 
-      font-size: 1.2rem;
-      font-weight: 400;
+      a {
+        color: #fff;
 
-      text-decoration: none;
-      cursor: pointer;
-      transition: color .2s;
+        font-size: 1.2rem;
+        font-weight: 400;
 
-      &:hover {
-        color: #d5d5d5;
-      }
+        text-decoration: none;
+        cursor: pointer;
+        transition: color .2s;
 
-      &.active {
-        text-decoration: underline;
+        &:hover {
+          color: #d5d5d5;
+        }
+
+        &.active {
+          text-decoration: underline;
+        }
       }
     }
   }
